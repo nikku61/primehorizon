@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Main Canvas Background Wrapper */
+.login-page-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1e2f3;
+  background-image: radial-gradient(circle at 20% 20%, #e3effa 0%, transparent 40%),
+                    radial-gradient(circle at 80% 80%, #cbdff2 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Container */
+.login-card {
+  display: flex;
+  width: 900px;
+  height: 540px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(74, 105, 140, 0.15);
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* LEFT PANEL STYLE */
+.left-panel {
+  width: 42%;
+  background-color: #2b5c8f;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Logo block */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* Slightly increased gap for optimal positioning */
+  z-index: 3;
+}
+
+.logo-icon {
+  width: 44px; /* Scaled up to give the rain and cloud proper legibility */
+  height: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-size: 14px;
+}
+
+.logo-main {
+  font-weight: 600;
+}
+
+.logo-sub {
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Left Bottom Typography */
+.welcome-text {
+  z-index: 3;
+}
+
+.welcome-text p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.welcome-text h3 {
+  margin: 4px 0 0 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* CSS Vector Shapes Reproduction */
+.geometric-art-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.geometric-art-shapes::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -130px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 45px solid #bce1f7;
+  opacity: 0.8;
+}
+
+.geometric-art-shapes::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  left: -40px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #204770;
+}
+
+/* RIGHT PANEL STYLE */
+.right-panel {
+  width: 58%;
+  padding: 60px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.right-panel h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 35px 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 25px;
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 4px 12px rgba(0, 0, 0, 0.03);
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #c4c4c4;
+}
+
+.input-group input:focus {
+  border-color: #2b5c8f;
+  box-shadow: 0 4px 12px rgba(43, 92, 143, 0.1);
+}
+
+/* Helper Links Grid */
+
+.link-signup {
+  color: #666666;
+}
+
+.link-signup strong {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+.link-forgot {
+  color: #666666;
+}
+
+/* Submit Action Button */
+.btn-login {
+  background-color: #2b5c8f;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(43, 92, 143, 0.3);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.btn-login:hover {
+  background-color: #1f456c;
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+/* Footer Copyright / Help note */
+.support-footer {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.support-footer a {
+  color: #2b5c8f;
+  text-decoration: underline;
+}
+
+/* NOTIFICATION TOAST OVERLAYS */
+.notification-toast {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-toast.success {
+  background-color: #2ec4b6;
+}
+
+.notification-toast.error {
+  background-color: #e71d36;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
